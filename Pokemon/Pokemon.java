@@ -6,13 +6,14 @@ public class Pokemon {
     int hp;
     String type;
     String name;
-    String skill = "Quick Attack";
+    String skill;
     
-    public Pokemon(int level, int hp, String name) {
+    public Pokemon(int level, int hp, String name, String skill) {
 
         this.level = level;
         this.hp = hp;
-        this.name = name;        
+        this.name = name;       
+        this.skill = skill; 
     }
 
     public int getHP() {
@@ -25,10 +26,6 @@ public class Pokemon {
 
     public int getLevel() {
         return level;
-    }
-
-    public void setSkill (String skill) {
-        this.skill = skill;
     }
 
     @Override

@@ -12,8 +12,7 @@ public class PokemonGame {
         
         // INTIALIZE USER POKEMON AND WILDD POKEMONS
 
-        Pokemon userPokemon = new Pokemon(15, 80, "Pikachu");
-        userPokemon.setSkill("Thunderbolt");
+        Pokemon userPokemon = new Pokemon(15, 80, "Pikachu", "Thunderbolt");
 
         Pokemon[] wildPokemonsArray = createWildPokemons();
 
@@ -91,7 +90,7 @@ public class PokemonGame {
             int level = (random.nextInt(MAX_LEVEL - MIN_LEVEL) + MIN_LEVEL);
             int hp = (random.nextInt(MAX_HP - MIN_HP) + MIN_HP);
 
-            Pokemon pokemon = new Pokemon(level, hp, name);
+            Pokemon pokemon = new Pokemon(level, hp, name, "Quick Attack");
 
             wildPokemonsArray[i] = pokemon;
         }
@@ -193,7 +192,7 @@ public class PokemonGame {
 
         return switch (getAction()) {
             
-            case 1 ->  attack(userPokemon, wildPokemon);
+            case 1 -> attack(userPokemon, wildPokemon);
 
             case 2 -> escape(userPokemon, wildPokemon);
 
